@@ -19,37 +19,37 @@ The application includes both simple and complex calculators, demonstrating para
 ### Charting/Complex Calculator View
 ![Complex Calculator/Charting](screenshots/render_results_to_webapp.jpg)
 
-### setting up application
+# setting up application
 ## setting up backend
-# set up python venv
+### set up python venv
 python -m venv venv
 
-# activate python venv
+### activate python venv
 venv\Scripts\activate     # Windows
 
-# install python server tools
+### install python server tools
 pip install fastapi uvicorn
 
-# install setuptools for matlab backend
+### install setuptools for matlab backend
 python -m pip install setuptools
 
-# enable matlab backend engine
+### enable matlab backend engine
 cd D:\matlab\extern\engines\python # replace with matlab install directory
 python setup.py install
 
 ## setting up frontend
-# install and setup react frontend
+### install and setup react frontend
 npx create-react-app frontend
 cd frontend
 npm install axios
 npm install react-router-dom
 
-### running application
-## running backend
+## running application
+### running backend
 venv\Scripts\activate
 cd backend
 uvicorn app:app --reload --port 8000
 
-## running frontend
+### running frontend
 cd frontend
 npm start
